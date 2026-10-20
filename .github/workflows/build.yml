@@ -1,5 +1,5 @@
 
-name: Build FloatingSixKeys
+name: Build FloatingKeys
 
 on:
   workflow_dispatch:
@@ -24,7 +24,7 @@ jobs:
 
       - name: Publish Windows application
         run: >
-          dotnet publish FloatingSixKeys.csproj
+          dotnet publish FloatingKeys.csproj
           -c Release
           -r win-x64
           --self-contained true
@@ -35,5 +35,5 @@ jobs:
       - name: Upload executable
         uses: actions/upload-artifact@v4
         with:
-          name: FloatingSixKeys-Windows
+          name: FloatingKeys-Windows
           path: publish/
